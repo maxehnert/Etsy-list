@@ -3,16 +3,18 @@ console.log(" ");
 console.log("Answer to Question 1");
 console.log(" ");
 
-// var w = [];
-// items.forEach(function(x){
-//   var y = x.price;
-//     w.push = (y)
-// w.reduce(function)
-//     console.log(w/25);
-// });
-//
-// });
+//all of the prices
+var all_prices = items.map(function(item){
+  return item.price;
+});
 
+//add them all together
+var added_together = all_prices.reduce(function(initial, current){
+  return initial + current;
+});
+  var sum = added_together / items.length;
+
+  console.log(sum);
 
 
 //2. Show me how to get an array of items that cost between $14.00 and $18.00 USD
@@ -21,12 +23,17 @@ console.log("Answer to Question 2");
 console.log(" ");
 
 items.forEach(function(x){
-  if(x.price >14.00 && x.price<18.00){
+  if(x.price > 14.00 && x.price < 18.00){
     console.log(x.title)
   }
 }
 );
+//in class version, returning 'object' and not answer
+var mid_price_items = items.filter(function(item){
+  return item.price > 14.00 && item.price < 18.00 && item.currency_code == "USD";
+});
 
+console.log(mid_price_items);
 
 //3. Show me how find the item with a "GBP" currency code and print its name and price. Please console.log the one you find.
 console.log(" ");
