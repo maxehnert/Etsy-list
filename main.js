@@ -3,12 +3,15 @@ console.log(" ");
 console.log("Answer to Question 1");
 console.log(" ");
 
-// items.reduce(function(x){
-//   (x.price / 25)
+// var w = [];
+// items.forEach(function(x){
+//   var y = x.price;
+//     w.push = (y)
+// w.reduce(function)
+//     console.log(w/25);
 // });
-
-
-
+//
+// });
 
 
 
@@ -68,10 +71,26 @@ items.forEach(function(x){
   //});
 });
 
+
+//6. Show me how to calculate how many items were made by their sellers
+console.log(" ");
+console.log("Answer to Question 6");
+console.log(" ");
+
+var results= items.filter(function(x){
+  return(x.who_made == "i_did");
+    // console.log( results);
+
+});
+
+console.log(results.length + " were made by their sellers");
+
+console.log(" ");
+
+
 // var numbers = [1,2,3,4,5,4,3,2,1];
 // var filterResult = numbers.filter(function(item, index, array)
-// { return (item > 2);
-// });
+// { return (item > 2); });
 // alert(filterResult); //[3,4,5,4,3]
 
 
